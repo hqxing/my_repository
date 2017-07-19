@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="js/vue.js"></script>
+    </head>
+    <body>
+    <div id="for_classmates">
+    	<ul>
+    		<li v-for="classmate in classmates">
+    			name:{{classmate.name}},sex：{{classmate.sex}},hobby：{{classmate.hobby}}
+    		</li>
+    	</ul>
+    </div>
+
+	<script>
+		var classmates=new Vue({
+			el:'#for_classmates',
+			data:{
+				classmates:[
+				{name:'miao',sex:'female',hobby:'running'},
+				{name:'annie',sex:'female',hobby:'reading'},			
+				{name:'xing',sex:'female',hobby:'watching film'},
+				{name:'lu',sex:'female',hobby:'singing'}
+				]
+			}
+		})
+	</script>
+
+    </body>
+</html>
